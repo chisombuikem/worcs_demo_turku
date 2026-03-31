@@ -1,0 +1,14 @@
+worcs_version: 0.1.20
+creator: chiso
+entry_point: manuscript/manuscript.Rmd
+recipe:
+  recipe: rmarkdown::render('manuscript/manuscript.Rmd')
+  terminal: no
+data:
+  df.csv:
+    save_expression: write.csv(x = data, file = filename, row.names = FALSE)
+    load_expression: read.csv(file = filename, stringsAsFactors = TRUE)
+    codebook: codebook_df.rmd
+    labels: value_labels_df.yml
+checksums:
+  df.csv: c3ba69e41deba28bf0ea977ccb5a0110

@@ -1,0 +1,9 @@
+species:
+  class: factor
+  '1': Adelie
+  '2': Chinstrap
+  '3': Gentoo
+sex:
+  class: factor
+  '1': female
+  '2': male
