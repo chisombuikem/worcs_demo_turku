@@ -4,3 +4,23 @@
 # to store the data.
 
 library(worcs)
+
+df <- read.csv("penguins.csv", stringsAsFactors = TRUE) 
+
+head(df)
+
+df[["island"]] <- NULL ## make columns disappear 
+
+## descriptives of variables
+descriptives(df) 
+
+## ADD DATA TO REPOSITORY 
+open_data(df) 
+
+## TEST IF THE UPLOAD TO REPOSITORY WORKS
+rm(df)
+
+load_data()  ## brings back original data 
+
+## PUSH TO GITHUB
+##worcs::git_update("prepared my data") - run on console
